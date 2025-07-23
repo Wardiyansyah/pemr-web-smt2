@@ -3,9 +3,8 @@
 Nomor Kamar : <select name="cbkamar">
 <?php
 include 'koneksi.php';
-$query = mysqli_query($conn,"select * from kamar");
-while($baris=mysqli_fetch_array($query))
-{
+$query = mysqli_query($conn,"select * from kamar where status = 'Tidak ada'");
+while($baris=mysqli_fetch_array($query)){
 echo "<option value='$baris[0]'>$baris[0]</option>";
 }
 ?>
