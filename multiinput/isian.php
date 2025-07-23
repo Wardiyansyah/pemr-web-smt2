@@ -7,8 +7,9 @@
   </head>
   <body>
     <form action="insert.php" method="post">
-      <table>
+      <table border='2'>
         <tr>
+          <th>No</th>
           <th>NIM</th>
           <th>Nama</th>
           <th>Jurusan</th>
@@ -19,6 +20,9 @@
         for ($i = 1; $i <= $n; $i++):
             ?>
           <tr>
+            <td>
+              <?= $i ?>
+            </td>
             <td>
               <input type="text" name="<?= "nim".$i ?>"
             </td>
